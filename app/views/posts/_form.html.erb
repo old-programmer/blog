@@ -1,0 +1,22 @@
+<%= form_for @post do |f| %>
+
+	<div class="form-controller">
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</div>
+
+	<div class="form-controller">
+		<%= f.label :summery %>
+		<%= f.text_field :summary %>
+	</div>
+
+	<div class="form-controller">
+		<%= f.label :body %>
+		<%= f.text_field :body %>
+	</div>
+
+	<div class="form-controller">
+		<%= f.submit 'Сохранить' %>
+	</div>
+
+<% end %>

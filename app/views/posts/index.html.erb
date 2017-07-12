@@ -1,0 +1,17 @@
+<h1>Listing posts</h1>
+ 
+<table style="width: 500px; text-align: left; border-bottom: 1px dotted #777">
+  <tr>
+    <th>Title</th>
+    <th>Summary</th>
+    <th>Body</th>
+  </tr>
+ 
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.summary %></td>
+      <td><%= post.body %></td>
+    </tr>
+  <% end %>
+</table>
