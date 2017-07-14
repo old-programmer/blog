@@ -6,11 +6,28 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+  </head>
   <body>
-    <%= link_to 'Все статьи', posts_path %> | 
-  	<%= link_to 'Новая статья', new_post_path %>
-    <%= yield %>
+    <div class="container">
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="<%= posts_path %>">Статьи <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <%= link_to 'Новая статья', new_post_path, class: 'btn btn-outline-primary pull-xs-right' %>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container main">
+      <%= yield %>
+    </div>
   </body>
 </html>
