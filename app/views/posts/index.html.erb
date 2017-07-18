@@ -1,5 +1,8 @@
 <h1><%= t('.title') %></h1>
 
-<%= render @posts %>
+<selection id='posts'>
+	<%= render @posts %>
+</selection>
+
 
 <%= will_paginate @posts, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>

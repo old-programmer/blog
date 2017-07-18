@@ -18,7 +18,8 @@
 		if @post.save
 			redirect_to @post, success: 'Статья успешно создана'
 		else
-			render :new, danger: 'Статья не создана'
+			flash.now[:danger] = 'Статья не создана'
+			render :new
 		end
 	end
 
@@ -29,7 +30,8 @@
 		if @post.update_attributes(post_params)
 			redirect_to @post, success: 'Статья успешно обновлена'
 		else
-			render :edit, danger: 'Статья не обновлена'
+			flash.now[:danger] = 'Статья не создана'
+			render :edit
 		end
 	end
 
