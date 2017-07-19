@@ -30,7 +30,7 @@
 		if @post.update_attributes(post_params)
 			redirect_to @post, success: 'Статья успешно обновлена'
 		else
-			flash.now[:danger] = 'Статья не создана'
+			flash.now[:danger] = 'Статья не обновлена'
 			render :edit
 		end
 	end
